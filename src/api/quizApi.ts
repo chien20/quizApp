@@ -1,11 +1,5 @@
-import { IndexedObject } from "utils/types";
+import { Difficulty, IndexedObject } from "utils/types";
 import axiosClient from "./axios-interceptor";
-
-export enum Difficulty {
-    EASY = 'easy',
-    MEDIUM = 'medium',
-    HARD = 'hard',
-}
 
 export type ParamsQuiz = {
     amount: number;

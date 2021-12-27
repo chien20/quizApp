@@ -1,5 +1,5 @@
 import React from 'react';
-import { Difficulty, ParamsQuiz } from 'api/quizApi';
+import { ParamsQuiz } from 'api/quizApi';
 import { Dispatch, Selector } from 'app/hooks';
 import QuizCard from 'components/QuizCard';
 import { getQuiz, nextQuestion } from 'features/quiz/quizSlice';
@@ -9,10 +9,11 @@ import { publicUrl } from 'utils/utils';
 import { Button, Form, Select, Skeleton } from 'antd';
 import { notification } from "antd";
 import { SmileOutlined } from '@ant-design/icons';
+import { Difficulty, IndexedObject } from 'utils/types';
 
 const { Option } = Select;
 
-const App : React.FC = () => {
+const App : React.FC<IndexedObject> = () => {
   const dispatch = Dispatch();
   const {
     loading,
@@ -34,7 +35,7 @@ const App : React.FC = () => {
   const notificationScore = () => {
     notification.open({
       message: 'Congratulations !!',
-      description: `Score of previous round: ${score} ! Let's keep playing !`,
+      description: `Score of previous round: ${score}/${quizList.length} ! Let's keep playing !`,
       icon: <SmileOutlined style={{ color: '#ed9147', fontSize: '30px' }} />,
       top: 40,
     });

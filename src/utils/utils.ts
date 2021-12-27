@@ -9,6 +9,13 @@ export const isEmptyObject = (obj: IndexedObject) => {
     return JSON.stringify(obj) === JSON.stringify({});
 }
 
+export const isPromise = (value: any): boolean => {
+  if (value !== null && typeof value === 'object') {
+    return value && typeof value.then === 'function';
+  }
+  return false;
+};
+
 export const publicUrl = (url: string) => {
     return `${process.env.PUBLIC_URL}${url}`;
 };
