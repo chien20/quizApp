@@ -1,0 +1,63 @@
+.quiz_card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .number {
+        font-size: 28px;
+        margin-bottom: 20px;
+        >b {
+            display: inline-block;
+            margin-left: 8px;
+            font-weight: 600;
+            color: rgb(107, 235, 107);
+        }
+    }
+    .question {
+        font-size: 26px;
+        margin-bottom: 30px;
+        max-width: calc(100% - 300px);
+    }
+    .answers {
+        width: calc(100% - 300px);
+        .answer {
+            margin-bottom: 20px;
+            text-align: center;
+            button {
+                max-width: 100%;
+                padding: 8px 40px;
+                height: auto;
+                background: none;
+                color: rgb(134, 243, 238);
+                border: 1px solid rgb(134, 243, 238);
+                border-radius: 28px;
+                font-size: 20px;
+                transition: all linear .2s;
+                &:hover {
+                    background: rgb(46, 168, 162);
+                    color: #fff;
+                    transition: all linear .2s;
+                }
+                &.user_answer {
+                    color: rgb(248, 128, 128);
+                    border: 2px solid rgb(248, 128, 128);
+                    font-weight: 600;
+                    &:hover {
+                        background: rgb(221, 50, 50);
+                        color: #fff;
+                    }
+                }
+                &.answer_correct {
+                    color: rgb(107, 235, 107);
+                    border: 2px solid rgb(107, 235, 107);
+                    font-weight: 600;
+                    &:hover {
+                        background: rgb(11, 196, 11);
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

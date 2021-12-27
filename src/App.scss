@@ -1,0 +1,172 @@
+.app {
+  overflow: hidden;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  >img {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,.24);
+  }
+  .app_body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    >h1 {
+      font-family: 'Faster One', cursive;
+      font-size: 120px;
+      color: rgb(134, 243, 238);
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    .ant-form {
+      margin-top: 40px;
+      .ant-form-item {
+        margin-bottom: 40px;
+        justify-content: space-between;
+        &:last-child {
+          text-align: center;
+          margin-top: 80px;
+          .ant-btn {
+            padding: 6px 40px;
+            height: auto;
+            background: none;
+            color: rgb(134, 243, 238);
+            border: 1px solid rgb(134, 243, 238);
+            border-radius: 28px;
+            font-size: 40px;
+            font-family: 'Faster One', cursive;
+            text-transform: uppercase;
+            transition: all linear .2s;
+            &:hover {
+              background: rgb(134, 243, 238);
+              color: #fff;
+              transition: all linear .2s;
+            }
+          }
+        }
+        .ant-form-item-label {
+          min-width: 400px;
+          text-align: left;
+          label {
+            font-size: 38px;
+            height: 60px;
+            color: #fff;
+          }
+        }
+        .ant-form-item-control {
+          .ant-form-item-control-input {
+            .ant-form-item-control-input-content {
+              .ant-select {
+                .ant-select-selector {
+                  min-width: 200px;
+                  height: 60px;
+                  padding: 0 24px;
+                  border-radius: 10px;
+                  border: 2px solid rgb(122, 236, 231);
+                  .ant-select-selection-item {
+                    line-height: 50px;
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 600;
+                    font-family: 'Shizuru', cursive;
+                    color: rgb(19, 185, 177);
+                  }
+                }
+                .ant-select-arrow {
+                  font-size: 14px;
+                  color: rgb(19, 185, 177);
+                  right: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .score {
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 20px;
+      >span {
+        font-size: 58px;
+        display: inline-block;
+        margin-left: 12px;
+        color: rgb(134, 243, 238);
+        font-family: 'Shizuru', cursive;
+      }
+    }
+    .loading {
+      font-size: 30px;
+      color: rgb(134, 243, 238);
+      font-family: 'Shizuru', cursive;
+    }
+    .loading_ske {
+      .ant-skeleton {
+        display: block;
+        overflow: hidden;
+        width: 600px;
+        margin-bottom: 30px;
+        .ant-skeleton-input {
+          height: 50px;
+          border-radius: 12px;
+        }
+      }
+    }
+    .next {
+      padding: 6px 40px;
+      background: none;
+      color: rgb(134, 243, 238);
+      border: none;
+      font-size: 40px;
+      font-family: 'Faster One', cursive;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.ant-select-dropdown {
+  font-family: 'Shizuru', cursive;
+  .ant-select-item {
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+  }
+  .ant-select-item-option-selected {
+    color: rgb(19, 185, 177);
+  }
+}
+
+.ant-notification {
+  .ant-notification-notice {
+    border-radius: 12px;
+    .ant-notification-notice-message {
+      font-size: 24px;
+      font-weight: 600;
+      color: rgb(12, 185, 177);
+    }
+    .ant-notification-notice-description {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}
